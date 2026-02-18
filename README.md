@@ -13,7 +13,7 @@ _This document contains the main commands and settings for configuring/installin
 
 ### `cmatrix`
 
-O cmatrix é um programa de linha de comando que simula o efeito visual de código caindo em um terminal, inspirado na interface de computadores vistos em filmes. Ele cria uma matriz de caracteres aleatórios que deslizam pela tela, proporcionando um visual estilizado e retro. O cmatrix é popular entre entusiastas de tecnologia e Linux pela sua estética única e pela capacidade de personalização através de diferentes modos de exibição e opções de configuração.
+O `cmatrix` é um programa de linha de comando que simula o efeito visual de código caindo em um `Terminal Emulator`, inspirado na _interface_ de computadores vistos em filmes. Ele cria uma matriz de caracteres aleatórios que deslizam pela tela, proporcionando um visual estilizado e retro. O `cmatrix` é popular entre entusiastas de tecnologia e `Linux` pela sua estética única e pela capacidade de personalização através de diferentes modos de exibição e opções de configuração.
 
 
 ## 1. Como configurar/instalar/usar o `cmatrix` no `Linux Ubuntu` [1][3]
@@ -28,28 +28,59 @@ Para configurar/instalar/usar o `cheese` no `Linux Ubuntu`, você pode seguir es
 
 2. Certifique-se de que seu sistema esteja limpo e atualizado.
 
-    2.1 Limpar o `cache` do gerenciador de pacotes `apt`. Especificamente, ele remove todos os arquivos de pacotes (`.deb`) baixados pelo `apt` e armazenados em `/var/cache/apt/archives/`. Digite o seguinte comando: `sudo apt clean` 
-    
-    2.2 Remover pacotes `.deb` antigos ou duplicados do cache local. É útil para liberar espaço, pois remove apenas os pacotes que não podem mais ser baixados (ou seja, versões antigas de pacotes que foram atualizados). Digite o seguinte comando: `sudo apt autoclean`
+    2.1 Limpar o `cache` do gerenciador de pacotes `apt`. Especificamente, ele remove todos os arquivos de pacotes (`.deb`) baixados pelo `apt` e armazenados em `/var/cache/apt/archives/`. Digite o seguinte comando:
+    ```bash
+    sudo apt clean
+    ```
 
-    2.3 Remover pacotes que foram automaticamente instalados para satisfazer as dependências de outros pacotes e que não são mais necessários. Digite o seguinte comando: `sudo apt autoremove -y`
+    2.2 Remover pacotes `.deb` antigos ou duplicados do `cache` local. É útil para liberar espaço, pois remove apenas os pacotes que não podem mais ser baixados (ou seja, versões antigas de pacotes que foram atualizados). Digite o seguinte comando:
+    ```bash
+    sudo apt autoclean
+    ```
 
-    2.4 Buscar as atualizações disponíveis para os pacotes que estão instalados em seu sistema. Digite o seguinte comando e pressione `Enter`: `sudo apt update`
+    2.3 Remover pacotes que foram automaticamente instalados para satisfazer as dependências de outros pacotes e que não são mais necessários. Digite o seguinte comando:
+    ```bash
+    sudo apt autoremove -y
+    ```
 
-    2.5 **Corrigir pacotes quebrados**: Isso atualizará a lista de pacotes disponíveis e tentará corrigir pacotes quebrados ou com dependências ausentes: `sudo apt --fix-broken install`
+    2.4 Buscar as atualizações disponíveis para os pacotes que estão instalados em seu sistema. Digite o seguinte comando e pressione `Enter`:
+    ```bash
+    sudo apt update
+    ```
 
-    2.6 Limpar o `cache` do gerenciador de pacotes `apt`. Especificamente, ele remove todos os arquivos de pacotes (`.deb`) baixados pelo `apt` e armazenados em `/var/cache/apt/archives/`. Digite o seguinte comando: `sudo apt clean` 
-    
-    2.7 Para ver a lista de pacotes a serem atualizados, digite o seguinte comando e pressione `Enter`:  `sudo apt list --upgradable`
+    2.5 **Corrigir pacotes quebrados**: Isso atualizará a lista de pacotes disponíveis e tentará corrigir pacotes quebrados ou com dependências ausentes:
+    ```bash
+    sudo apt --fix-broken install
+    ```
 
-    2.8 Realmente atualizar os pacotes instalados para as suas versões mais recentes, com base na última vez que você executou `sudo apt update`. Digite o seguinte comando e pressione `Enter`: `sudo apt full-upgrade -y`
-    
+    2.6 Limpar o `cache` do gerenciador de pacotes `apt` novamente:
+    ```bash
+    sudo apt clean
+    ```
 
-3. **Instale o pacote cmatrix utilizando o comando**: `sudo apt install cmatrix -y`
+    2.7 Para ver a lista de pacotes a serem atualizados, digite o seguinte comando e pressione `Enter`:
+    ```bash
+    sudo apt list --upgradable
+    ```
 
-Após a conclusão da instalação, você pode executar o `cmatrix` simplesmente digitando `cmatrix` no terminal. Para sair do `cmatrix`, basta pressionar `Ctrl+C`.
+    2.8 Realmente atualizar os pacotes instalados para as suas versões mais recentes, com base na última vez que você executou `sudo apt update`. Digite o seguinte comando e pressione `Enter`:
+    ```bash
+    sudo apt full-upgrade -y
+    ```
 
-Se você quiser ver mais opções e como configurar o comportamento do `cmatrix`, pode consultar a página de manual digitando man `cmatrix` no terminal.
+3. **Instale o pacote `cmatrix` utilizando o comando**:
+
+    ```bash
+    sudo apt install cmatrix -y
+    ```
+
+    Após a conclusão da instalação, você pode executar o `cmatrix` simplesmente digitando `cmatrix` no `Terminal Emulator`. Para sair do `cmatrix`, basta pressionar `Ctrl+C`.
+
+Se você quiser ver mais opções e como configurar o comportamento do `cmatrix`, pode consultar a página de manual digitando no `Terminal Emulator`:
+
+    ```bash
+    man cmatrix
+    ```
 
 ### 2. Código completo para configurar/instalar/usar
 
@@ -63,7 +94,7 @@ Para configurar/instalar/usar o `cheese` no `Linux Ubuntu` sem precisar digitar 
 
 2. Digite o seguinte comando e pressione `Enter`:
 
-    ```
+    ```bash
     sudo apt clean                                                            
     sudo apt autoclean
     sudo apt autoremove -y
@@ -79,7 +110,7 @@ Para configurar/instalar/usar o `cheese` no `Linux Ubuntu` sem precisar digitar 
 
 ## Referências
 
-[1] OPENAI. ***Install Cheese on Ubuntu.*** Disponível em: <https://chatgpt.com/c/9c4f8197-ceac-458e-ae02-695fb7c9d67a> (texto adaptado). Acessado em: 23/04/2023 17:11.
+[1] OPENAI. ***Instalar o `cmatrix` no `linux ubuntu` pelo `terminal emulator`.*** Disponível em: <https://chatgpt.com/c/9c4f8197-ceac-458e-ae02-695fb7c9d67a> (texto adaptado). Acessado em: 23/04/2023 17:11.
 
 [2] OPENAI. ***Vs code: editor popular.*** Disponível em: <https://chat.openai.com/c/b640a25d-f8e3-4922-8a3b-ed74a2657e42> (texto adaptado). Acessado em: 23/04/2024 17:10.
 
